@@ -19,13 +19,11 @@
         }
         
         // If No Errors Send The Email [ mail(To, Subject, Message, Headers, Parameters) ]
-        
-        $headers = 'From: ' . $mail . '\r\n';
-        $myEmail = 'osama.elzero@gmail.com';
-        $subject = 'Contact Form';
+        $headers = 'From: ' . $mail . '\r\n';   // Sender emil address
+        $myEmail = 'osama.elzero@gmail.com';    // Recipient email address
+        $subject = 'Contact Form';              // Email subject
         
         if (empty($formErrors)) {
-            
             mail($myEmail, $subject, $msg, $headers);
             
             $user = '';
@@ -33,8 +31,7 @@
             $cell = '';
             $msg = '';
             
-            $success = '<div class="alert alert-success">We Have Recieved Your Message</div>';
-            
+            $success = '<div class="alert alert-success">We Have Received Your Message</div>';
         }
         
     }
@@ -61,7 +58,6 @@
     <body>
         
         <!-- Start Form -->
-        
         <div class="container">
             <h1 class="text-center">Contact Me</h1>
             <form class="contact-form" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
@@ -128,7 +124,6 @@
                 <i class="fa fa-send fa-fw send-icon"></i>
             </form>
         </div>
-        
         <!-- End Form -->
         
         <script src="js/jquery-1.12.4.min.js"></script>
